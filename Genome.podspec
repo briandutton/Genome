@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = '4.1'
   spec.license      = 'MIT'
   spec.homepage     = 'https://github.com/briandutton/genome'
-  spec.authors      = { 'Logan Wright' }
+  spec.authors      = { 'Logan Wright' => ''}
   spec.summary      = 'A simple, type safe, failure driven mapping library for serializing data to models in Swift'
   spec.source       = { :git => 'https://github.com/briandutton/genome.git', :tag => "#{spec.version}" }
   spec.ios.deployment_target = "8.0"
