@@ -8,7 +8,7 @@ extension Node {
     }
 
     public init(_ int: Int) {
-        self = .number(Number(int))
+        self = .number(Number(UInt(int)))
     }
 
     public init(_ double: Double) {

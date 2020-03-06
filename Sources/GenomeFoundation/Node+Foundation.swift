@@ -21,7 +21,7 @@ extension Node {
         case let bool as Bool:
             self = .bool(bool)
         case let int as Int:
-            self = .number(Number(int))
+            self = .number(Number(UInt(int)))
         case let uint as UInt:
             self = .number(Number(uint))
         case let string as String:
