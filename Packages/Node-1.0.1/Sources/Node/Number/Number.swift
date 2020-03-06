@@ -9,15 +9,13 @@ extension Node {
 // MARK: Initializers
 
 extension Node.Number {
-    public init<I: Integer>(_ value: I) {
-        let max = value.toIntMax()
-        let int = Int(max)
+    public init<I: SignedInteger>(value: I) {
+        let int = Int(value)
         self = .int(int)
     }
 
     public init<U: UnsignedInteger>(_ value: U) {
-        let max = value.toUIntMax()
-        let uint = UInt(max)
+        let uint = UInt(value)
         self = .uint(uint)
     }
 
@@ -139,7 +137,7 @@ public func ==(lhs: Node.Number, rhs: Node.Number) -> Bool {
 
 extension Node.Number: ExpressibleByIntegerLiteral {
     public init(integerLiteral value: IntegerLiteralType) {
-        self.init(value)
+        self.init(UInt(value))
     }
 }
 
